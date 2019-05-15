@@ -1,0 +1,27 @@
+<!-- My Little HTML-->
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js">
+</script>
+<body ng-app="myApp">
+
+<table ng-controller="myCtrl" border="1">
+<tr ng-repeat="(x, y) in myObj">
+  <td>{{x}}</td>
+  <td>{{y}}</td>  
+</tr>
+</table>
+
+<script>
+var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+  $scope.myObj = {
+    "Name" : "Alfreds Futterkiste",
+    "Country" : "Germany",
+    "City" : "Berlin"
+  }
+});
+</script>
+
+</body>
+</html>
