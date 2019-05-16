@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body ng-app="myApp">
+
+    <table id="demo" border=1></table>
+
+<!-- <table ng-controller="myCtrl" border="2">
+<tr ng-repeat="(y, z) in dayzInMonth">
+<tr ng-repeat="int in dayzInMonth">
+  <td>
+    {{y}}
+  </td>
+  <td>
+    {{z}}
+  </td> 
+</tr>
+</table> -->
+
+
+<script>
+var i;
+var text = "";
+for (i = 1; i < 31; i++)
+{ 
+  if (i%7 == 0)
+  {
+   text += "<br>";
+  }
+
+  text += ("<td>" + i.toString() + "</td>");
+
+  if (i%7 == 0)
+  {
+   text += "</tr>";
+  }
+}
+
+document.getElementById("demo").innerHTML = text;
+</script>
+
+<script>
+var app = angular.module("myApp", []);
+var colY = 2;
+var colX = 1;
+//var dayzInMonth = new array(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
+
+
+
+
+//app.controller("myCtrl", function($scope) {
+//  $scope.text = {
+//    "1" : colX + 1,
+//    "2" : colX + 2,
+//    "3" : colX + 3,
+//    "4" : colX + 4,
+//    "5" : colX + 5,
+//    "6" : colX + 6,
+//    "7" : colX + 7
+//  }
+//});-->
+</script>
+
+</body>
+</html>
